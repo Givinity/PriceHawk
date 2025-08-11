@@ -73,6 +73,26 @@ docs = ["furo (>=2024.8.6)", "sphinx (>=5.0)", "sphinx-notfound-page"]
 testing = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)", "setuptools (>=71.0.0)"]
 
 [[package]]
+name = "environs"
+version = "14.3.0"
+description = "simplified environment variable parsing"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "environs-14.3.0-py3-none-any.whl", hash = "sha256:91e4c4ea964be277855cdd83a588f6375f10fad9fa452660ecb9f503c230f26a"},
+    {file = "environs-14.3.0.tar.gz", hash = "sha256:20672d92db325ce8114872b1989104eb84f083486325b5a44bcddff56472a384"},
+]
+
+[package.dependencies]
+marshmallow = ">=3.18.0"
+python-dotenv = "*"
+
+[package.extras]
+dev = ["environs[tests]", "pre-commit (>=4.0,<5.0)", "tox"]
+django = ["dj-database-url", "dj-email-url", "django-cache-url"]
+tests = ["backports.strenum", "environs[django]", "packaging", "pytest"]
+
+[[package]]
 name = "filelock"
 version = "3.18.0"
 description = "A platform independent file lock."
@@ -101,6 +121,22 @@ files = [
 
 [package.extras]
 license = ["ukkonen"]
+
+[[package]]
+name = "marshmallow"
+version = "4.0.0"
+description = "A lightweight library for converting complex datatypes to and from native Python datatypes."
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "marshmallow-4.0.0-py3-none-any.whl", hash = "sha256:e7b0528337e9990fd64950f8a6b3a1baabed09ad17a0dfb844d701151f92d203"},
+    {file = "marshmallow-4.0.0.tar.gz", hash = "sha256:3b6e80aac299a7935cfb97ed01d1854fb90b5079430969af92118ea1b12a8d55"},
+]
+
+[package.extras]
+dev = ["marshmallow[tests]", "pre-commit (>=3.5,<5.0)", "tox"]
+docs = ["autodocsumm (==0.2.14)", "furo (==2024.8.6)", "sphinx (==8.2.3)", "sphinx-copybutton (==0.5.2)", "sphinx-issues (==5.0.1)", "sphinxext-opengraph (==0.10.0)"]
+tests = ["pytest", "simplejson"]
 
 [[package]]
 name = "nodeenv"
@@ -169,6 +205,20 @@ dev = ["ast-comments (>=1.1.2)", "black (>=24.1.0)", "codespell (>=2.2)", "dnspy
 docs = ["Sphinx (>=5.0)", "furo (==2022.6.21)", "sphinx-autobuild (>=2021.3.14)", "sphinx-autodoc-typehints (>=1.12)"]
 pool = ["psycopg-pool"]
 test = ["anyio (>=4.0)", "mypy (>=1.14)", "pproxy (>=2.7)", "pytest (>=6.2.5)", "pytest-cov (>=3.0)", "pytest-randomly (>=3.5)"]
+
+[[package]]
+name = "python-dotenv"
+version = "1.1.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "python_dotenv-1.1.1-py3-none-any.whl", hash = "sha256:31f23644fe2602f88ff55e1f5c79ba497e01224ee7737937930c448e4d0e24dc"},
+    {file = "python_dotenv-1.1.1.tar.gz", hash = "sha256:a8a6399716257f45be6a007360200409fce5cda2661e3dec71d23dc15f6189ab"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
 
 [[package]]
 name = "pyyaml"
@@ -319,4 +369,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "ce621e7107af4a56a7a7c6beef21466b522ef86233fbfa79501302b063edf0b9"
+content-hash = "e7e092dace4b82acb308082aedb2b1a56a0db4da71d72d341bce695085468b31"

@@ -12,6 +12,17 @@ psycopg = "^3.2"
 django-environ = "^0.12.0"
 
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.12.8"
+pre-commit = "^4.3.0"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I"]  # PEP8 (pycodestyle), Pyflakes, сортировка импортов
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

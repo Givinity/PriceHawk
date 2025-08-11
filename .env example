@@ -1,0 +1,6 @@
+SECRET_KEY=django-insecure-)=uhoDF@qwefbUQHJeffjhfbhjfejhfbdajhfb
+DB_NAME=price_monitor
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_HOST=localhost
+DB_PORT=5432

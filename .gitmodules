@@ -1,0 +1,3 @@
+[submodule "parser_avito"]
+	path = parser_avito
+	url = https://github.com/Duff89/parser_avito
